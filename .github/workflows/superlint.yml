@@ -11,14 +11,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Super-Linter
-  # You may pin to the exact commit or the version.
-  # uses: super-linter/super-linter@a8150b40c89574adb5f68bf9502b890a236a06b3
         uses: super-linter/super-linter@v5.7.2
-
-      - name: Push notification on Whatsapp
-  # You may pin to the exact commit or the version.
-  # uses: ishween/whatsapp-push-notify-action@0ebd035b3d88b770a573a6d87f54860043ac0165
-        uses: ishween/whatsapp-push-notify-action@1.2
         env:
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

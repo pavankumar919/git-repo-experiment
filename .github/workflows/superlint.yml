@@ -1,0 +1,27 @@
+name: Super-linter
+
+on: push
+
+jobs:
+  super-lint:
+    name: Lint code base
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/chcekout@v2
+
+      - name: Run Super-Linter
+        uses: github/super-linter@v3
+
+      - name: Push notification on Whatsapp
+  # You may pin to the exact commit or the version.
+  # uses: ishween/whatsapp-push-notify-action@0ebd035b3d88b770a573a6d87f54860043ac0165
+        uses: ishween/whatsapp-push-notify-action@1.2
+        env:
+          DEFAULT_BRANCH: main
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
+
+
+
+          
